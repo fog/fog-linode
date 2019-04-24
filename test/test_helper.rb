@@ -1,4 +1,4 @@
-$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-require "fog/linode"
+$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
+require 'fog/linode'
 
-require "minitest/autorun"
+require 'minitest/autorun'

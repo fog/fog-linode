@@ -8,6 +8,7 @@ module Fog
     autoload :Linode, File.expand_path('linode/compute', __dir__)
   end
 
+  # Main Linode fog provider module
   module Linode
     extend Fog::Provider
     service(:compute, 'Compute')
