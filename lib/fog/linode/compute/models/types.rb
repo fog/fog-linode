@@ -2,11 +2,11 @@ require 'fog/core/collection'
 require 'fog/linode/compute/models/type'
 
 module Fog
-  module Compute
-    class Linode
+  module Linode
+    class Compute
       # Collection class for loading Type models from Linode instance type data
       class Types < Fog::Collection
-        model Fog::Compute::Linode::Type
+        model Type
 
         def all(options = {})
           types = service.list_types(options)

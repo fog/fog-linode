@@ -1,8 +1,8 @@
 require 'fog/core/model'
 
 module Fog
-  module Compute
-    class Linode
+  module Linode
+    class Compute
       # Read-only model for Linode instance types
       class Type < Fog::Model
         identity :id

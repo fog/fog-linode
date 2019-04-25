@@ -1,6 +1,6 @@
 module Fog
-  module Compute
-    class Linode
+  module Linode
+    class Compute
       # This class provides the actual implementation for service calls
       class Real
         def view_type(id, options = {})
