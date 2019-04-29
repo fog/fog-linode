@@ -1,6 +1,7 @@
 require 'simplecov'
 require 'minitest/spec'
 require 'minitest/autorun'
+require 'mocha/minitest'
 require 'vcr'
 
 VCR.configure do |c|

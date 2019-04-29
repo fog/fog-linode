@@ -1,6 +1,7 @@
 require 'fog/core'
 require 'fog/json'
 require 'fog/linode/version'
+require 'fog/linode/service'
 
 module Fog
   # Main Linode fog provider module

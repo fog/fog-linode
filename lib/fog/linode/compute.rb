@@ -13,25 +13,7 @@ module Fog
       model :type
 
       # Real implementation for Linode Compute service
-      class Real
-        def initialize(options = {})
-          request_defaults = {
-            path_prefix: '/v4',
-            headers: {
-              'Authorization' => "Bearer #{options[:linode_token]}"
-            }
-          }
-
-          @connection = Fog::Core::Connection.new('https://api.linode.com',
-                                                  options[:persistent],
-                                                  request_defaults)
-        end
-
-        private
-
-        def request(params)
-          @connection.request(params)
-        end
+      class Real < Service
       end
 
       # Mock service for unit tests
