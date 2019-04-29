@@ -9,7 +9,9 @@ module Fog
     extend Fog::Provider
 
     autoload :Compute, File.expand_path('linode/compute', __dir__)
+    autoload :DNS, File.expand_path('linode/dns', __dir__)
 
     service(:compute, 'Compute')
+    service(:dns, 'DNS')
   end
 end
