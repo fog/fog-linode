@@ -10,7 +10,7 @@ module Fog
             path: "linode/types/#{id}",
             query: options
           )
-          Fog::JSON.decode(response.body)
+          response.body
         end
       end
     end

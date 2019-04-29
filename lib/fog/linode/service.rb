@@ -28,7 +28,9 @@ module Fog
       end
 
       def request(params)
-        @connection.request(params)
+        response = @connection.request(params)
+        response.body = Fog::JSON.decode(response.body) unless response.body.nil?
+        response
       end
     end
   end

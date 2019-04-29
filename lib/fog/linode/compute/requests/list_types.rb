@@ -11,7 +11,7 @@ module Fog
             query: options
           )
 
-          Fog::JSON.decode(response.body)['data']
+          response.body['data']
         end
       end
     end
