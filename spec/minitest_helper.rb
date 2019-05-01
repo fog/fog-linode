@@ -7,9 +7,7 @@ require 'vcr'
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :webmock
-  c.filter_sensitive_data('<LINODE_TOKEN>') do |interaction|
-    interaction.request.headers['Authorization']
-  end
+  c.filter_sensitive_data('<LINODE_TOKEN>') { ENV['LINODE_TOKEN'] }
 end
 
 SimpleCov.start do
