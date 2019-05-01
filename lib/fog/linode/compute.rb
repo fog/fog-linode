@@ -7,10 +7,14 @@ module Fog
       request_path 'fog/linode/compute/requests'
       request :list_types
       request :view_type
+      request :list_kernels
+      request :view_kernel
 
       model_path 'fog/linode/compute/models'
       collection :types
       model :type
+      collection :kernels
+      model :kernel
 
       # Real implementation for Linode Compute service
       class Real < Service
