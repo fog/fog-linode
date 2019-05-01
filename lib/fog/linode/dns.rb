@@ -4,6 +4,9 @@ module Fog
     class DNS < Fog::Service
       requires :linode_token
 
+      request_path 'fog/linode/dns/requests'
+      request :create_domain
+
       # Real implementation for Linode DNS service
       class Real < Service
       end

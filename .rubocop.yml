@@ -2,6 +2,8 @@ LineLength:
   Enabled: false
 MethodLength:
   Enabled: false
+BlockLength:
+  Enabled: false
 ClassLength:
   Enabled: false
 Style/FrozenStringLiteralComment:
