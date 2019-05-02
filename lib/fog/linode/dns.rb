@@ -9,6 +9,7 @@ module Fog
       request :list_domains
       request :view_domain
       request :update_domain
+      request :delete_domain
 
       # Real implementation for Linode DNS service
       class Real < Service
