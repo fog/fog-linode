@@ -11,6 +11,10 @@ module Fog
       request :update_domain
       request :delete_domain
 
+      model_path 'fog/linode/dns/models'
+      collection :domains
+      model :domain
+
       # Real implementation for Linode DNS service
       class Real < Service
       end
