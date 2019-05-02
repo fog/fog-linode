@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.linode.com/v4/domains/1228336
+    body:
+      encoding: UTF-8
+      string: '{"description":"the new domain description from Fog::Linode::DNS#update_domain"}'
+    headers:
+      Authorization:
+      - Bearer <LINODE_TOKEN>
+      User-Agent:
+      - fog-linode/0.0.1.pre fog-core/1.45.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 01 May 2019 17:28:50 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '331'
+      Connection:
+      - keep-alive
+      X-Oauth-Scopes:
+      - "*"
+      X-Accepted-Oauth-Scopes:
+      - domains:read_write
+      X-Frame-Options:
+      - DENY, DENY
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, GET, OPTIONS, POST, PUT, DELETE
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, X-Requested-With, Content-Type, Accept, X-Filter
+      X-Spec-Version:
+      - 4.0.22
+      X-Ratelimit-Limit:
+      - '400'
+      X-Ratelimit-Remaining:
+      - '399'
+      X-Ratelimit-Reset:
+      - '1556731848'
+      Retry-After:
+      - '117'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Status
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Security-Policy:
+      - default-src 'none'
+      Vary:
+      - Authorization, X-Filter
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status": "active", "tags": [], "axfr_ips": [], "description": "the
+        new domain description from Fog::Linode::DNS#update_domain", "id": 1228336,
+        "retry_sec": 0, "master_ips": [], "ttl_sec": 0, "soa_email": "fog-testing@example.com",
+        "refresh_sec": 0, "expire_sec": 0, "domain": "charlestreatman.com", "type":
+        "master", "group": ""}'
+    http_version: 
+  recorded_at: Wed, 01 May 2019 17:28:50 GMT
+recorded_with: VCR 4.0.0
