@@ -6,6 +6,7 @@ module Fog
 
       request_path 'fog/linode/dns/requests'
       request :create_domain
+      request :list_domains
 
       # Real implementation for Linode DNS service
       class Real < Service
