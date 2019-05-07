@@ -13,6 +13,7 @@ module Fog
       request :create_domain_record
       request :list_domain_records
       request :view_domain_record
+      request :update_domain_record
 
       model_path 'fog/linode/dns/models'
       collection :domains
