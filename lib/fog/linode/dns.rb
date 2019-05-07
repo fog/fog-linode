@@ -14,6 +14,7 @@ module Fog
       request :list_domain_records
       request :view_domain_record
       request :update_domain_record
+      request :delete_domain_record
 
       model_path 'fog/linode/dns/models'
       collection :domains
