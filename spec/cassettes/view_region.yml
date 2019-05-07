@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linode.com/v4/regions/ap-northeast
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <LINODE_TOKEN>
+      User-Agent:
+      - fog-linode/0.0.1.pre fog-core/1.45.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 06 May 2019 16:39:20 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '39'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=900, private, max-age=60, s-maxage=60
+      X-Oauth-Scopes:
+      - "*"
+      X-Accepted-Oauth-Scopes:
+      - "*"
+      X-Frame-Options:
+      - DENY, DENY
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, GET, OPTIONS, POST, PUT, DELETE
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, X-Requested-With, Content-Type, Accept, X-Filter
+      X-Spec-Version:
+      - 4.0.22
+      Vary:
+      - Authorization, X-Filter, Authorization, X-Filter
+      X-Ratelimit-Limit:
+      - '400'
+      X-Ratelimit-Remaining:
+      - '399'
+      X-Ratelimit-Reset:
+      - '1557160880'
+      Retry-After:
+      - '119'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Status
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: ASCII-8BIT
+      string: '{"country": "jp", "id": "ap-northeast"}'
+    http_version: 
+  recorded_at: Mon, 06 May 2019 16:39:20 GMT
+recorded_with: VCR 4.0.0

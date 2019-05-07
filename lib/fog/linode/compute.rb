@@ -9,12 +9,16 @@ module Fog
       request :view_type
       request :list_kernels
       request :view_kernel
+      request :list_regions
+      request :view_region
 
       model_path 'fog/linode/compute/models'
       collection :types
       model :type
       collection :kernels
       model :kernel
+      collection :regions
+      model :region
 
       # Real implementation for Linode Compute service
       class Real < Service
