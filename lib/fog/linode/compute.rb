@@ -15,6 +15,9 @@ module Fog
       request :view_stack_script
       request :list_images
       request :view_image
+      request :list_servers
+      request :view_server
+      request :delete_server
 
       model_path 'fog/linode/compute/models'
       collection :types
