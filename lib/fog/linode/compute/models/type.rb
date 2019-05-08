@@ -9,7 +9,7 @@ module Fog
 
         attribute :label
         attribute :disk
-        # attribute :class TODO: need to figure out how to work around this
+        attribute :class_name
         attribute :price
         attribute :addons
         attribute :network_out
@@ -17,6 +17,15 @@ module Fog
         attribute :successor
         attribute :transfer
         attribute :vcpus
+
+        # Types have an attribute named `class`, which is a reserved word,
+        # so we rename the attribute to `class_name` before initalization
+        # to avoid runtime errors due to overwriting `class`
+        def initialize(attributes = {})
+          cleaned_attributes = attributes.dup
+          cleaned_attributes[:class_name] = cleaned_attributes.delete('class')
+          super(cleaned_attributes)
+        end
       end
     end
   end
