@@ -19,6 +19,8 @@ module Fog
       model_path 'fog/linode/dns/models'
       collection :domains
       model :domain
+      collection :domain_records
+      model :domain_record
 
       # Real implementation for Linode DNS service
       class Real < Service
