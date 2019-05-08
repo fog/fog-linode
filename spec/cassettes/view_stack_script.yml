@@ -1,0 +1,117 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linode.com/v4/linode/stackscripts/9217
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <LINODE_TOKEN>
+      User-Agent:
+      - fog-linode/0.0.1.pre fog-core/1.45.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 06 May 2019 18:48:03 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3981'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=0, s-maxage=0, no-cache, no-store, private, max-age=60, s-maxage=60
+      X-Oauth-Scopes:
+      - "*"
+      X-Accepted-Oauth-Scopes:
+      - stackscripts:read_only
+      X-Frame-Options:
+      - DENY, DENY
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, GET, OPTIONS, POST, PUT, DELETE
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, X-Requested-With, Content-Type, Accept, X-Filter
+      X-Spec-Version:
+      - 4.0.22
+      Vary:
+      - Authorization, X-Filter, Authorization, X-Filter
+      X-Ratelimit-Limit:
+      - '400'
+      X-Ratelimit-Remaining:
+      - '399'
+      X-Ratelimit-Reset:
+      - '1557168603'
+      Retry-After:
+      - '119'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Status
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: ASCII-8BIT
+      string: '{"description": "SiteDove Free is a powerful tool for beefing up the
+        security of your website at NO COST. It includes a unique Burglar Alarm that
+        shows you when changes are made to files on your site. If you''re not sure
+        who made those changes, you will want to investigate to see if your site has
+        been hacked.\r\n\r\nIn this way, SiteDove Free acts as an early warning system
+        that can detect malicious attacks long before search engines and your readers
+        encounter them. \r\n\t\t\t\r\nWebuzo is a Single User Control Panel which
+        helps users deploy Web Apps (WordPress, Joomla, Drupal, etc) or System Apps
+        (Apache, NGINX, PHP, Java, MongoDB, etc) on their virtual machines or in the
+        cloud.\r\n\r\nYou can get a Webuzo License here\r\nhttp://www.webuzo.com/pricing\r\n\r\nPath
+        to Installation Logs : /root/webuzo-install.log\r\n\r\nInstructions\r\nOn
+        completion of the installation process, access http://your-ip:2004 to configure
+        SiteDove and Softaculous Webuzo initially.\r\n\r\nContact : http://webuzo.com/contact",
+        "updated": "2014-06-10T09:58:58", "username": "webuzo", "logo_url": "", "deployments_total":
+        0, "user_gravatar_id": "cf0348f835d60e6d133040f49bb36ec5", "created": "2014-06-06T09:25:49",
+        "script": "#!/bin/bash\n# <udf name=\"webuzo_license_key\" label=\"Premium
+        Webuzo License Key\" example=\"WEBUZO-XXXXX-XXXXX-XXXXX\"/>\n\n###########################################################################################################\n#
+        Install SiteDove and Softaculous Webuzo\n# Description -\n# About Webuzo :\n#   Webuzo
+        is a Single User Control Panel which helps users deploy Web Apps (WordPress,
+        Joomla, Drupal, etc)\n#   or System Apps (Apache, NGINX, PHP, Java, MongoDB,
+        etc) on their virtual machines or in the cloud.\n#\n# About SiteDove :\n#   SiteDove
+        Free is a powerful tool for beefing up the security of your website at NO
+        COST.\n#   It includes a unique Burglar Alarm that shows you when changes
+        are made to files on your site.\n#   If you''re not sure who made those changes,
+        you will want to investigate to see if your site has been hacked.\n###########################################################################################################\n\n#
+        Install SiteDove Script using Webuzo\nfunction install_webuzo_script(){\n   \n    #
+        Install Webuzo\n    install_webuzo\n   \n    wget http://files.webuzo.com/ip.php
+        >> /root/webuzo-install.log 2>&1\n    ip=$(cat ip.php)\n   \n    /usr/local/emps/bin/curl
+        \"http://$ip:2004/install.php?prepareinstall=466&license=$1\"\n   \n}\n\n#
+        Install Webuzo Function\nfunction install_webuzo(){\n       \n    # Fetch
+        the Webuzo Installer\n    wget -N http://files.webuzo.com/install.sh >> /root/webuzo-install.log
+        2>&1\n   \n    # Modify Permissions\n    chmod 0755 install.sh >> /root/webuzo-install.log
+        2>&1\n   \n    # Execute\n    ./install.sh >> /root/webuzo-install.log 2>&1\n   \n    #
+        Clean Up\n    rm -rf install.sh >> /root/webuzo-install.log 2>&1\n   \n}\n\n#########################################################\n#\tInstalling
+        SiteDove and Softaculous Webuzo\n#########################################################\n\ninstall_webuzo_script
+        $WEBUZO_LICENSE_KEY\n\n# Check the return of the above command and display
+        the result accordingly\n\necho \" \"\necho \"-------------------------------------\"\necho
+        \" Installation Completed \"\necho \"-------------------------------------\"\necho
+        \"Congratulations, SiteDove has been successfully installed\"\necho \" \"\necho
+        \"You can now configure SiteDove and Softaculous Webuzo at the following URL
+        :\"\necho \"http://$ip:2004/\"\necho \" \"\necho \"Thank you for choosing
+        Softaculous Webuzo !\"\necho \" \"", "rev_note": "SiteDove powered by Webuzo",
+        "is_public": true, "deployments_active": 0, "label": "SiteDove powered by
+        Webuzo", "user_defined_fields": [], "id": 9217, "images": ["linode/centos6.8",
+        "linode/ubuntu12.04lts", "linode/ubuntu14.04lts", "linode/centos5.6", "linode/ubuntu10.04lts",
+        "linode/ubuntu10.04lts32bit"], "ordinal": 0}'
+    http_version: 
+  recorded_at: Mon, 06 May 2019 18:48:03 GMT
+recorded_with: VCR 4.0.0
