@@ -13,6 +13,8 @@ module Fog
       request :view_region
       request :list_stack_scripts
       request :view_stack_script
+      request :list_images
+      request :view_image
 
       model_path 'fog/linode/compute/models'
       collection :types
@@ -23,6 +25,8 @@ module Fog
       model :region
       collection :stack_scripts
       model :stack_script
+      collection :images
+      model :image
 
       # Real implementation for Linode Compute service
       class Real < Service
