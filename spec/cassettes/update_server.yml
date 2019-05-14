@@ -1,0 +1,136 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.linode.com/v4/linode/instances/1231330
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Authorization:
+      - Bearer <LINODE_TOKEN>
+      User-Agent:
+      - fog-linode/0.0.1.pre fog-core/1.45.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 404
+      message: NOT FOUND
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 14 May 2019 13:51:35 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '37'
+      Connection:
+      - keep-alive
+      X-Oauth-Scopes:
+      - "*"
+      X-Accepted-Oauth-Scopes:
+      - linodes:read_write
+      X-Frame-Options:
+      - DENY
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, GET, OPTIONS, POST, PUT, DELETE
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, X-Requested-With, Content-Type, Accept, X-Filter
+      X-Spec-Version:
+      - 4.0.22
+      X-Ratelimit-Limit:
+      - '400'
+      X-Ratelimit-Remaining:
+      - '399'
+      X-Ratelimit-Reset:
+      - '1557842014'
+      Retry-After:
+      - '119'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors": [{"reason": "Not found"}]}'
+    http_version: 
+  recorded_at: Tue, 14 May 2019 13:51:35 GMT
+- request:
+    method: put
+    uri: https://api.linode.com/v4/linode/instances/14003518
+    body:
+      encoding: UTF-8
+      string: '{"tags":["test-machine","updated"]}'
+    headers:
+      Authorization:
+      - Bearer <LINODE_TOKEN>
+      User-Agent:
+      - fog-linode/0.0.1.pre fog-core/1.45.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 14 May 2019 13:54:54 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '624'
+      Connection:
+      - keep-alive
+      X-Oauth-Scopes:
+      - "*"
+      X-Accepted-Oauth-Scopes:
+      - linodes:read_write
+      X-Frame-Options:
+      - DENY, DENY
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, GET, OPTIONS, POST, PUT, DELETE
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, X-Requested-With, Content-Type, Accept, X-Filter
+      X-Spec-Version:
+      - 4.0.22
+      X-Ratelimit-Limit:
+      - '400'
+      X-Ratelimit-Remaining:
+      - '399'
+      X-Ratelimit-Reset:
+      - '1557842213'
+      Retry-After:
+      - '118'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Status
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Security-Policy:
+      - default-src 'none'
+      Vary:
+      - Authorization, X-Filter
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: ASCII-8BIT
+      string: '{"group": "", "created": "2019-05-14T13:51:36", "watchdog_enabled":
+        true, "label": "linode14003518", "updated": "2019-05-14T13:51:36", "region":
+        "us-central", "backups": {"enabled": false, "schedule": {"window": null, "day":
+        null}}, "type": "g6-dedicated-4", "image": "linode/ubuntu18.04", "id": 14003518,
+        "status": "running", "specs": {"transfer": 5000, "disk": 51200, "memory":
+        8192, "vcpus": 4}, "ipv6": "2600:3c00::f03c:91ff:fec3:f675/64", "alerts":
+        {"io": 10000, "network_out": 10, "transfer_quota": 80, "network_in": 10, "cpu":
+        90}, "hypervisor": "kvm", "tags": ["test-machine", "updated"], "ipv4": ["69.164.198.244"]}'
+    http_version: 
+  recorded_at: Tue, 14 May 2019 13:54:54 GMT
+recorded_with: VCR 4.0.0
