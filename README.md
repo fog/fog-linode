@@ -32,6 +32,22 @@ finnix = compute.kernels.get('linode/finnix-legacy') # Load details for a single
 # Complex filtering
 wordpress_stack_scripts = compute.stack_scripts.all(filters: { description: { '+contains': 'WordPress' } }) # Load all StackScripts with a description containing 'WordPress'
 
+# Creating a Linode instance
+regions = compute.regions.all
+types = compute.types.all
+images = compute.images.all({filters: { label: { '+contains': 'CentOS' } } })
+server = compute.servers.new
+server.region = regions[2].id
+server.type = types[4].id
+server.image = images.first.id
+server.root_pass = '<password>'
+server.save
+
+# Updating a Linode instance
+server.tags = ['add', 'some', 'tags']
+server.save
+
+# Working with Linode Domains
 dns = Fog::DNS.new(provider: :linode, linode_token: '<your LinodeAPIv4 access token>')
 all_domains = dns.domains.all # Load all Linode Domains on your account
 exsiting_domain = dns.domains.get(1234567890) # Load details for a single Linode Domain on your account
