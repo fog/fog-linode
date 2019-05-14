@@ -44,6 +44,11 @@ module Fog
           end
         end
 
+        def destroy
+          requires :identity
+          service.delete_server(identity)
+        end
+
         private
 
         def attributes_for_update
