@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.linode.com/v4/linode/instances
+    body:
+      encoding: UTF-8
+      string: '{"type":"g6-dedicated-4","region":"us-central","image":"linode/ubuntu18.04","root_pass":"not_a_real_password"}'
+    headers:
+      Authorization:
+      - Bearer <LINODE_TOKEN>
+      User-Agent:
+      - fog-linode/0.0.1.pre fog-core/1.45.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 14 May 2019 13:54:53 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '604'
+      Connection:
+      - keep-alive
+      X-Oauth-Scopes:
+      - "*"
+      X-Accepted-Oauth-Scopes:
+      - linodes:read_write
+      X-Frame-Options:
+      - DENY, DENY
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, GET, OPTIONS, POST, PUT, DELETE
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, X-Requested-With, Content-Type, Accept, X-Filter
+      X-Spec-Version:
+      - 4.0.22
+      X-Ratelimit-Limit:
+      - '400'
+      X-Ratelimit-Remaining:
+      - '399'
+      X-Ratelimit-Reset:
+      - '1557842211'
+      Retry-After:
+      - '117'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Status
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Content-Security-Policy:
+      - default-src 'none'
+      Vary:
+      - Authorization, X-Filter
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: ASCII-8BIT
+      string: '{"label": "linode14003626", "backups": {"schedule": {"window": null,
+        "day": null}, "enabled": false}, "updated": "2019-05-14T13:54:51", "id": 14003626,
+        "alerts": {"cpu": 90, "network_out": 10, "network_in": 10, "io": 10000, "transfer_quota":
+        80}, "region": "us-central", "status": "provisioning", "image": "linode/ubuntu18.04",
+        "type": "g6-dedicated-4", "ipv6": "2600:3c00::f03c:91ff:fec3:f619/64", "ipv4":
+        ["96.126.112.230"], "created": "2019-05-14T13:54:51", "hypervisor": "kvm",
+        "watchdog_enabled": true, "tags": [], "specs": {"disk": 51200, "transfer":
+        5000, "memory": 8192, "vcpus": 4}, "group": ""}'
+    http_version: 
+  recorded_at: Tue, 14 May 2019 13:54:53 GMT
+recorded_with: VCR 4.0.0
