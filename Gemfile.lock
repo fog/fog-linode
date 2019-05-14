@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fog-linode (0.0.1.rc1)
+    fog-linode (0.0.1.rc2)
       fog-core (~> 1.43)
       fog-json (~> 1.0.2)
 
