@@ -28,6 +28,8 @@ module Fog
       model :kernel
       collection :regions
       model :region
+      collection :servers
+      model :server
       collection :stack_scripts
       model :stack_script
       collection :images
