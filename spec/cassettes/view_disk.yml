@@ -1,0 +1,135 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linode.com/v4/linode/instances/14022202/disks/12777316
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <LINODE_TOKEN>
+      User-Agent:
+      - fog-linode/0.0.1.rc2 fog-core/1.45.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 404
+      message: NOT FOUND
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 16 May 2019 14:27:18 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '37'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=0, s-maxage=0, no-cache, no-store
+      X-Oauth-Scopes:
+      - "*"
+      X-Accepted-Oauth-Scopes:
+      - linodes:read_only
+      X-Frame-Options:
+      - DENY
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, GET, OPTIONS, POST, PUT, DELETE
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, X-Requested-With, Content-Type, Accept, X-Filter
+      X-Spec-Version:
+      - 4.0.22
+      Vary:
+      - Authorization, X-Filter
+      X-Ratelimit-Limit:
+      - '400'
+      X-Ratelimit-Remaining:
+      - '399'
+      X-Ratelimit-Reset:
+      - '1558016958'
+      Retry-After:
+      - '119'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors": [{"reason": "Not found"}]}'
+    http_version: 
+  recorded_at: Thu, 16 May 2019 14:27:18 GMT
+- request:
+    method: get
+    uri: https://api.linode.com/v4/linode/instances/14022202/disks/29200416
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <LINODE_TOKEN>
+      User-Agent:
+      - fog-linode/0.0.1.rc2 fog-core/1.45.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 16 May 2019 14:29:50 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '169'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=0, s-maxage=0, no-cache, no-store, private, max-age=60, s-maxage=60
+      X-Oauth-Scopes:
+      - "*"
+      X-Accepted-Oauth-Scopes:
+      - linodes:read_only
+      X-Frame-Options:
+      - DENY, DENY
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, GET, OPTIONS, POST, PUT, DELETE
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, X-Requested-With, Content-Type, Accept, X-Filter
+      X-Spec-Version:
+      - 4.0.22
+      Vary:
+      - Authorization, X-Filter, Authorization, X-Filter
+      X-Ratelimit-Limit:
+      - '400'
+      X-Ratelimit-Remaining:
+      - '399'
+      X-Ratelimit-Reset:
+      - '1558017110'
+      Retry-After:
+      - '119'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Status
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: ASCII-8BIT
+      string: '{"updated": "2019-05-16T14:27:22", "created": "2019-05-16T14:27:19",
+        "label": "create_disk_spec", "filesystem": "ext4", "size": 10000, "status":
+        "ready", "id": 29200416}'
+    http_version: 
+  recorded_at: Thu, 16 May 2019 14:29:50 GMT
+recorded_with: VCR 4.0.0
