@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linode.com/v4/linode/instances/14022202/disks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <LINODE_TOKEN>
+      User-Agent:
+      - fog-linode/0.0.1.rc2 fog-core/1.45.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 16 May 2019 14:29:51 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '564'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private, max-age=0, s-maxage=0, no-cache, no-store, private, max-age=60, s-maxage=60
+      X-Oauth-Scopes:
+      - "*"
+      X-Accepted-Oauth-Scopes:
+      - linodes:read_only
+      X-Frame-Options:
+      - DENY, DENY
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - HEAD, GET, OPTIONS, POST, PUT, DELETE
+      Access-Control-Allow-Headers:
+      - Authorization, Origin, X-Requested-With, Content-Type, Accept, X-Filter
+      X-Spec-Version:
+      - 4.0.22
+      Vary:
+      - Authorization, X-Filter, Authorization, X-Filter
+      X-Ratelimit-Limit:
+      - '400'
+      X-Ratelimit-Remaining:
+      - '399'
+      X-Ratelimit-Reset:
+      - '1558017110'
+      Retry-After:
+      - '118'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Status
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results": 3, "pages": 1, "page": 1, "data": [{"id": 29171265, "status":
+        "ready", "label": "Ubuntu 18.04 LTS Disk", "updated": "2019-05-16T14:27:10",
+        "filesystem": "ext4", "size": 40688, "created": "2019-05-15T18:58:51"}, {"id":
+        29171266, "status": "ready", "label": "512 MB Swap Image", "updated": "2019-05-15T18:59:16",
+        "filesystem": "swap", "size": 512, "created": "2019-05-15T18:58:51"}, {"id":
+        29200416, "status": "ready", "label": "update_disk_spec", "updated": "2019-05-16T14:29:51",
+        "filesystem": "ext4", "size": 10000, "created": "2019-05-16T14:27:19"}]}'
+    http_version: 
+  recorded_at: Thu, 16 May 2019 14:29:51 GMT
+recorded_with: VCR 4.0.0

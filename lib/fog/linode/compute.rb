@@ -20,6 +20,11 @@ module Fog
       request :view_server
       request :update_server
       request :delete_server
+      request :create_disk
+      request :list_disks
+      request :view_disk
+      request :update_disk
+      request :delete_disk
 
       model_path 'fog/linode/compute/models'
       collection :types
