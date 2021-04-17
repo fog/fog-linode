@@ -49,6 +49,10 @@ module Fog
           service.delete_server(identity)
         end
 
+        def ready?
+          status == 'running'
+        end
+
         private
 
         def attributes_for_update
